@@ -38,6 +38,10 @@ const Chip = () => {
       if (keySelected === null) {
         setKeySelected(selectedItems.length - 1);
       } else {
+        setFilteredData([
+          ...filteredData,
+          selectedItems[selectedItems.length - 1],
+        ]);
         const updatedItems = selectedItems.slice(0, -1);
         setKeySelected(null);
         setSelectedItems(updatedItems);
